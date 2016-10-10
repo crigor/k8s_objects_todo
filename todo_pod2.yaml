@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: todo2
+  labels:
+    name: todo
+spec:
+  containers:
+    - name: todo
+      image: crigor/todo
+      ports:
+      - containerPort: 3000
+      env:
+        - name: DATABASE_URL
+          valueFrom:
+            secretKeyRef:
+              name: todo-database-url
+              key: database-url

@@ -1,0 +1,21 @@
+{
+    "kind": "Service",
+    "apiVersion": "v1",
+    "metadata": {
+        "name": "todo-service-label-app"
+    },
+    "spec": {
+        "selector": {
+            "app": "todo"
+        },
+        "ports": [
+            {
+                "name": "http",
+                "protocol": "TCP",
+                "port": 80,
+                "targetPort": 3000
+            }
+        ]
+    }
+}
+
