@@ -1,0 +1,3 @@
+kubectl create secret generic todo-database-url --from-file=database-url
+kubectl create -f todo_deployment.yaml
+kubectl create -f todo_service_lb.yaml
